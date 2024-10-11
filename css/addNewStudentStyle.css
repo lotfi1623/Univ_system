@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+}
+
+body{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background: linear-gradient(135deg,#ff8a02, #2c2c2c);
+}
+.container{
+      max-width: 700px;
+      width: 100%;
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 5px;
+}
+.container .title{
+      font-size: 25px;
+      font-weight: 500;
+      position: relative;
+}
+.container .title::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 30px;
+      background: linear-gradient(135deg,#ff8a02, #2c2c2c);
+}
+.container form .user-details{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+}
+.container form .user-details .input-box{
+      width: calc(100% / 2 - 20px);
+}
+.container form .user-details .input-box .details{
+      display: block;
+      font-weight: 500;
+      margin-bottom: 5px;
+}
+.container form .user-details .input-box input{
+      height: 45px;
+      width: 100%;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      padding-left: 15px;
+      font-size: 16px;
+      border-bottom-width: 2px;
+      transition: all 0.3s ease;
+}
+.container form .user-details .input-box input:focus,
+.container form .user-details .input-box input:valid{
+      border-color: #ff8a02;
+}
+form .gender-details .gender-title{
+      font-size: 20px;
+      font-weight: 500;
+}
+form .gender-details .category{
+      display: flex;
+      width: 40%;
+      margin: 2px 0;
+      justify-content: space-between;
+}
+form .gender-details .category label{
+      display: flex;
+      align-items: center;
+}
+form .gender-details .category .dot{
+      height: 18px;
+      width: 18px;
+      background: #d9d9d9;
+      border-radius: 50%;
+      margin-right: 10px;
+      border: 5px solid transparent;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two{
+      border-color: #d9d9d9;
+      background: #ff8a02;
+}
+form input[type="radio"]{
+      display: none;
+}
+form .button{
+      height: 45px;
+}
+form .button{
+      height: 45px;
+      margin: 45px 0;
+}
+form .button input{
+      height: 100%;
+      width: 100%;
+      outline: none;
+      color: #fff;
+      border: none;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      background: linear-gradient(135deg,#ff8a02, #2c2c2c);
+}
+form .button input:hover{
+      background: linear-gradient(-135deg,#ff8a02, #2c2c2c);
+}
+@media (max-width: 584px) {
+      .container{
+            max-width: 100%;
+      }
+      form .user-details .input-box{
+            margin-bottom: 15px;
+            width: 100%;
+      }
+      form .gender-details .category{
+            width: 100%;
+      }
+
+}
